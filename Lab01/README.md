@@ -11,7 +11,7 @@ ArtifactID - Identificador do projeto(é o nome do projeto).
 - mvn package - Compila o projeto e gera o ficheiro .jar.
 - mvn clean - Limpa o diretório target.
 - mvn install - Instala o projeto no repositório local.
-- mvn exec:java -Dexec.mainClass="com.mycompany.app.App" - Executa a classe App.
+- mvn exec:java -Dexec.mainClass="com.mycompany.app.App" -Dexec.args="argumento" Executa a classe App.
 
 
 
