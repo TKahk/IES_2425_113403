@@ -13,6 +13,13 @@ ArtifactID - Identificador do projeto(é o nome do projeto).
 - mvn install - Instala o projeto no repositório local.
 - mvn exec:java -Dexec.mainClass="com.mycompany.app.App" -Dexec.args="argumento" Executa a classe App.
 
+### Comandos docker portainer
+
+- docker container start portainer - Inicia o container portainer.
+- docker container stop portainer - Para o container portainer.
+- docker image build -t docker-java-jar:latest .
+- docker run docker-java-jar:latest 
+
 
 
 
