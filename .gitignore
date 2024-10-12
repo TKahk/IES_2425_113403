@@ -11,3 +11,6 @@ buildNumber.properties
 
 .project
 .classpath
+
+# Pdf files
+*.pdf

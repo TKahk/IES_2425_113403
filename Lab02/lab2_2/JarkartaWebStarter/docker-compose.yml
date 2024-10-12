@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  tomcat:
+    image: tomcat:10.0-jdk17
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./target:/usr/local/tomcat/webapps
+    command: "catalina.sh run"
