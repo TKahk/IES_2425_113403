@@ -1,0 +1,52 @@
+.post-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  height: 300px;
+  display: inline-table;
+  flex-direction: column; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.post-body {
+  font-size: 16px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-post-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  margin: 10px;
+  padding: 10px;
+}

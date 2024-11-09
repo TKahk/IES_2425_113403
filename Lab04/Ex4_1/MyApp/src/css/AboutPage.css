@@ -1,0 +1,14 @@
+/* AboutPage.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the content horizontally */
+    justify-content: center; /* Centers the content vertically */
+    height: 100vh; /* Ensures full height for vertical centering */
+    text-align: center; /* Centers the text inside the container */
+}
+
+.avatar {
+    border-radius: 50%; /* Optional: makes the image circular */
+    border: 5px solid aquamarine;
+}
