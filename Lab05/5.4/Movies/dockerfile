@@ -1,0 +1,20 @@
+# Multi-stage Dockerfile for Spring Boot Application
+# Builder Stage
+FROM eclipse-temurin:17-jdk-alpine as builder
+WORKDIR /Movies
+RUN apk add --no-cache maven
+COPY . .
+RUN mvn clean package -DskipTests && \
+    rm -rf ~/.m2/repository
+
+# Production Stage
+FROM eclipse-temurin:17-jre-alpine
+RUN apk add --no-cache curl
+COPY --from=builder /Movies/target/Movies-0.0.1-SNAPSHOT.jar /Movies.jar
+EXPOSE 8080
+
+# Add Healthcheck (Optional)
+HEALTHCHECK --interval=30s --timeout=10s \
+    CMD curl -f http://localhost:8080/actuator/health || exit 1
+
+ENTRYPOINT ["java", "-jar", "/Movies.jar"]

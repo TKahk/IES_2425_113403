@@ -1,19 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import Get from './GetAndDelete.jsx'
-import Post from './Post.jsx'
-import Axios from './Axios.jsx'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+curl -X POST http://localhost:8080/api/cars \
+-H "Content-Type: application/json" \
+-d '{
+    "teamName": "Mercedes",
+    "teamColor": "Silver",
+    "tyreTemp": [80.0, 85.0, 90.0, 75.0],
+    "location": [10, 20],
+    "position": 1,
+    "currentLap": 5,
+    "tyreType": "Soft",
+    "fuelLevel": 50.5,
+    "currentSpeed": 200.0,
+    "lapTime": [55.2]
+    "driver": {
+        "driverNumber": 10
+    }
+}'
 
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/get" element={<Get />} />
-        <Route path="/post" element={<Post />} />
-        <Route path="/axios" element={<Axios />} />
-      </Routes>
-    </Router>
-  </StrictMode>,
-)

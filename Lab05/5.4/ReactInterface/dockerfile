@@ -1,0 +1,6 @@
+FROM node:18-alpine
+WORKDIR /ReactInterface
+COPY . .
+RUN npm install
+EXPOSE 5173
+CMD ["npm", "start"]
